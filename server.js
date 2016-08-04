@@ -9,7 +9,7 @@ const errorResponse = require('./lib/errorModule');
 const debug = require('debug');
 
 const LOCAL_DB = 'mongodb://localhost/movie_db';
-const DB_SERVER = process.env.DB_SERVER || LOCAL_DB;
+const DB_SERVER = process.env.MONGODB_URI || LOCAL_DB;
 
 mongoose.connect(DB_SERVER);
 
